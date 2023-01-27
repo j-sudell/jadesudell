@@ -8,5 +8,9 @@ export async function get(context) {
 		title: SITE_TITLE,
 		description: 'Personal page',
 		site: context.site,
+		items: posts.map((post) => ({
+			...post.data,
+			link: `/blog/${post.slug}/`,
+		})),
 	});
 }
