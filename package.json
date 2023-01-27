@@ -1,5 +1,5 @@
 {
-  "name": "@example/blog",
+  "name": "@j-sudell/jadesudell",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -10,10 +10,22 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
+  "devDependencies": {
     "@astrojs/mdx": "^0.15.0",
     "@astrojs/rss": "^2.1.0",
     "@astrojs/sitemap": "^1.0.0",
-    "astro": "^2.0.1"
-  }
+    "astro": "^2.0.1",
+    "prettier": "^2.8.3",
+    "prettier-plugin-astro": "^0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-sudell/jadesudell.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-sudell/jadesudell/issues"
+  },
+  "homepage": "https://github.com/j-sudell/jadesudell#readme"
 }
