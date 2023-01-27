@@ -1,0 +1,41 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Socials from '../components/Socials.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} />
+	</head>
+	<body>
+		<main>
+			<h1>Hello! I'm Jade Sudell</h1>
+			<p>
+				TODO
+			</p>
+			<h2>Professional</h2>
+			<ul>
+				<p>👋 Well-versed Quality Engineer across functional, and non-functional testing.</p>
+				<p>🚀 Experience working within Agile and Waterfall methodologies, with a BDD approach to software development.</p>
+				<p>⚙️ Hands-on experience with test frameworks such as; Playwright, CypressIO, Protractor, Cucumber, WebdriverIO & Supertest.</p>
+				<p>🗣 JavaScript/Node (with a touch of Ruby & C#) </p>
+			</ul>
+			<h2>About me</h2>
+			<ul>
+				<p>📍 Based in Edinburgh.</p>
+				<p>🌭 Owner of two (naughty) sausage dogs.</p>
+				<p>🎮 I play video games.</p>
+				<p>🍰 Bit of a foodie.</p>
+			</ul>
+			<h2>Chat</h2>
+			<p>
+				Talk to me about work, or sausage dogs.
+			</p>
+			<Socials />
+		</main>
+		<Footer />
+	</body>
+</html>
