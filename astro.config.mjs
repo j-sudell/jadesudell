@@ -4,6 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'www.jsudell.com',
+  site: 'https://jsudell.com',
   integrations: [mdx(), sitemap()]
 });
