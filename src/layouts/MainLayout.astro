@@ -4,10 +4,13 @@ import consts from "../data/consts.json";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Tabs from "../components/Tabs.astro";
 import "../styles/global.css";
 ---
 
-<!DOCTYPE html>
+<link rel="preconnect" href="https://rsms.me/" />
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
 <html lang="en">
   <head>
     <BaseHead title={title} />
@@ -15,13 +18,15 @@ import "../styles/global.css";
   <Header />
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl">
+      <!-- First section -->
       <div class="px-4 py-5 sm:px-6">
-        <p
+        <h1
           class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl"
         >
           Hi, I'm Jade.
-        </p>
+        </h1>
       </div>
+      <!-- Second section -->
       <div class="px-4 py-5 sm:p-6">
         <div class="sm:flex">
           <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
@@ -31,18 +36,23 @@ import "../styles/global.css";
               alt="Jade Sudell"
             />
           </div>
-          <div class="border-b border-gray-200 pb-5">
-            <h3 class="leading- text-lg font-medium text-gray-900">About</h3>
-            <p class="mt-2 max-w-4xl text-sm text-gray-500">
+          <div class="pb-5">
+            <h3 class="leading text-lg font-medium text-gray-900">About</h3>
+            <p class="mt-4 max-w-4xl text-sm text-gray-500">
               I'm passionate about delivering high quality, accessible
-              applications. In addition to 'all things testing', I like to coach
-              engineering teams in Agile best practices, and creating positive
-              working cultures.
+              applications.
+            </p>
+            <p class="mt-4 max-w-4xl text-sm text-gray-500">
+              In addition to 'all things testing', I like to coach engineering
+              teams in Agile best practices, and creating positive working
+              environments.
             </p>
           </div>
         </div>
-        <Footer />
       </div>
+      <!-- Third section -->
+      <Tabs />
     </div>
+    <Footer />
   </div>
 </html>

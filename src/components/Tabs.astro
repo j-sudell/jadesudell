@@ -1,0 +1,71 @@
+<div class="mx-auto max-w-2xl">
+  <div class="mb-4 border-b border-gray-200">
+    <ul
+      class="-mb-px flex flex-wrap"
+      id="myTab"
+      data-tabs-toggle="#myTabContent"
+      role="tablist"
+    >
+      <li class="mr-2" role="presentation">
+        <button
+          class="active inline-block rounded-t-lg border-b-2 border-transparent py-4 px-4 text-center text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-600"
+          id="profressional-tab"
+          data-tabs-target="#profressional"
+          type="button"
+          role="tab"
+          aria-controls="profressional"
+          aria-selected="true">Professional</button
+        >
+      </li>
+      <li class="mr-2" role="presentation">
+        <button
+          class="inline-block rounded-t-lg border-b-2 border-transparent py-4 px-4 text-center text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-600"
+          id="personal-tab"
+          data-tabs-target="#personal"
+          type="button"
+          role="tab"
+          aria-controls="personal"
+          aria-selected="false">Personal</button
+        >
+      </li>
+    </ul>
+  </div>
+  <div
+    class="p-4"
+    id="profressional"
+    role="tabpanel"
+    aria-labelledby="profressional-tab"
+  >
+    <ul class="mt-2 text-sm text-gray-500">
+      <p>👋 Well-versed across functional, and non-functional testing.</p>
+      <p>
+        🚀 Experience working within Agile and Waterfall methodologies, with a
+        BDD approach to software development.
+      </p>
+      <p>
+        ⚙️ Hands-on experience with automation test frameworks such as;
+        Playwright, CypressIO, Protractor, Cucumber, WebdriverIO & Supertest.
+      </p>
+      <p>🗣 JavaScript/Node (with a touch of Ruby & C#)</p>
+    </ul>
+  </div>
+  <div id="myTabContent">
+    <div
+      class="hidden p-4"
+      id="personal"
+      role="tabpanel"
+      aria-labelledby="personal-tab"
+    >
+      <ul class="mt-2 text-sm text-gray-500">
+        <p>📍 Based in Edinburgh.</p>
+        <p>🌭 Owner of two (naughty) sausage dogs.</p>
+        <p>🎮 I play video games.</p>
+        <p>🍰 Bit of a foodie.</p>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"
+></script>
