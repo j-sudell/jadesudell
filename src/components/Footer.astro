@@ -1,13 +1,15 @@
 ---
+import consts from "../data/consts.json";
 const today = new Date();
 ---
 
 <footer class="bg-white">
-  <div class="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
-    <div class="mt-10 flex justify-center space-x-10">
+  <div class="mx-auto max-w-7xl overflow-hidden py-5 px-6 sm:py-1 lg:px-1">
+    <div class="mt-5 flex justify-center space-x-10">
       <a
-        href="https://www.linkedin.com/in/jadesudell/"
-        class="text-gray-400 hover:text-gray-500"
+        href={consts.linkedInUrl}
+        class="text-gray-400 hover:text-pink-600"
+        target="_blank"
       >
         <span class="sr-only">LinkedIn</span>
         <svg
@@ -24,8 +26,9 @@ const today = new Date();
       </a>
 
       <a
-        href="https://github.com/j-sudell"
-        class="text-gray-400 hover:text-gray-500"
+        href={consts.githubUrl}
+        class="text-gray-400 hover:text-pink-600"
+        target="_blank"
       >
         <span class="sr-only">GitHub</span>
         <svg
@@ -41,8 +44,9 @@ const today = new Date();
         </svg>
       </a>
     </div>
-    <p class="mt-10 text-center text-xs leading-5 text-gray-500">
-      &copy; {today.getFullYear()} Jade Sudell
+    <p class="mt-5 text-center text-xs leading-5 text-gray-500">
+      &copy; {today.getFullYear()}
+      {consts.name}
     </p>
   </div>
 </footer>

@@ -1,16 +1,15 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
-import '../styles/global.css';
+import "../styles/global.css";
+import consts from "../data/consts.json";
 
 export interface Props {
-	title: string;
-	image?: string;
+  title: string;
+  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, image = '/j-icon.png' } = Astro.props;
+const { title, image = "/j-icon.png" } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -24,10 +23,4 @@ const { title, image = '/j-icon.png' } = Astro.props;
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
-<meta name="title" content={title} />
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta name="title" content={consts.title} />
