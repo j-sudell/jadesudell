@@ -1,65 +1,85 @@
-<div class="py-2">
-  <div class="mb-0 border-b border-gray-200">
-    <ul
-      class="-mb-px flex flex-wrap"
-      id="myTab"
-      data-tabs-toggle="#myTabContent"
-      role="tablist"
-    >
-      <li class="mr-2" role="presentation">
-        <button
-          class="active inline-block border-b-2 border-transparent py-4 px-4 text-center text-sm font-medium text-pink-600 hover:border-gray-600 hover:text-gray-600"
-          id="profressional-tab"
-          data-tabs-target="#profressional"
-          type="button"
-          role="tab"
-          aria-controls="profressional"
-          aria-selected="true">Professional</button
-        >
-      </li>
-      <li class="mr-2" role="presentation">
-        <button
-          class="inline-block border-b-2 border-transparent py-4 px-4 text-center text-sm font-medium text-pink-600 hover:border-gray-600 hover:text-gray-600"
-          id="personal-tab"
-          data-tabs-target="#personal"
-          type="button"
-          role="tab"
-          aria-controls="personal"
-          aria-selected="false">Personal</button
-        >
-      </li>
-    </ul>
-  </div>
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+  <ul
+    class="-mb-px flex flex-wrap text-center text-sm font-medium text-gray-500 dark:text-gray-400"
+    id="tabContent"
+    role="tablist"
+  >
+    <li class="mr-2" role="presentation">
+      <button
+        class="inline-block rounded-t-lg border-b-2 border-transparent p-3 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
+        id="profressional-tab"
+        type="button"
+        role="tab"
+        aria-controls="profressional"
+        aria-selected="false">Profressional</button
+      >
+    </li>
+    <li class="mr-2" role="presentation">
+      <button
+        class="inline-block rounded-t-lg border-b-2 border-transparent p-3 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
+        id="personal-tab"
+        type="button"
+        role="tab"
+        aria-controls="personal"
+        aria-selected="false">Personal</button
+      >
+    </li>
+  </ul>
+</div>
+<div id="tabContent">
   <div
-    class="p-4"
+    class="hidden rounded-lg p-4 dark:bg-gray-800"
     id="profressional"
     role="tabpanel"
     aria-labelledby="profressional-tab"
   >
-    <ul class="mt-2 text-sm text-gray-500">
+    <ul class="text-sm text-gray-500">
       <p>👋 Well-versed across functional, and non-functional testing.</p>
       <p>🚀 Experience working within Agile and Waterfall methodologies.</p>
       <p>⚙️ Playwright, CypressIO, Cucumber, WebdriverIO & Supertest.</p>
       <p>🗣️ JavaScript/Node (with a touch of Ruby & C#)</p>
     </ul>
   </div>
-  <div id="myTabContent">
-    <div
-      class="hidden p-4"
-      id="personal"
-      role="tabpanel"
-      aria-labelledby="personal-tab"
-    >
-      <ul class="mt-2 text-sm text-gray-500">
-        <p>📍 Based in Edinburgh.</p>
-        <p>🌭 Owner of two (naughty) sausage dogs.</p>
-        <p>🎮 I play video games.</p>
-        <p>🍰 Bit of a foodie.</p>
-      </ul>
-    </div>
-  </div>
+</div>
+<div
+  class="hidden rounded-lg p-4 dark:bg-gray-800"
+  id="personal"
+  role="tabpanel"
+  aria-labelledby="personal-tab"
+>
+  <ul class="text-sm text-gray-500">
+    <p>📍 Based in Edinburgh.</p>
+    <p>🌭 Owner of two (naughty) sausage dogs.</p>
+    <p>🎮 I play video games.</p>
+    <p>🍰 Bit of a foodie.</p>
+  </ul>
 </div>
 
-<script
-  src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"
-></script>
+<script>
+  import { Tabs } from "flowbite";
+  import type { TabsInterface, TabItem } from "flowbite";
+
+  const tabElements: TabItem[] = [
+    {
+      id: "profressional",
+      triggerEl: document.querySelector("#profressional-tab"),
+      targetEl: document.querySelector("#profressional"),
+    },
+    {
+      id: "personal",
+      triggerEl: document.querySelector("#personal-tab"),
+      targetEl: document.querySelector("#personal"),
+    },
+  ];
+
+  const options = {
+    defaultTabId: "profressional",
+    activeClasses:
+      "text-pink-600 hover:text-pink-600 dark:text-pink-500 dark:hover:text-pink-400 border-pink-600 dark:border-pink-500",
+    inactiveClasses:
+      "text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300",
+  };
+
+  const tabs: TabsInterface = new Tabs(tabElements, options);
+  tabs.show("profressional");
+</script>
