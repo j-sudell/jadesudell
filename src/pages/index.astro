@@ -1,41 +1,6 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Socials from '../components/Socials.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE } from '../consts';
+import MainLayout from "../layouts/MainLayout.astro";
+import consts from "../data/consts.json";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} />
-	</head>
-	<body>
-		<main>
-			<h1>Hello I'm Jade!</h1>
-			<p>
-				I'm passionate about delivering high quality, accessible applications. In addition to 'all things testing', I like to coach engineering teams in Agile best practices, and creating positive working cultures. 
-			</p>
-			<h2>Professional</h2>
-			<ul>
-				<p>👋 Well-versed across functional, and non-functional testing.</p>
-				<p>🚀 Experience working within Agile and Waterfall methodologies, with a BDD approach to software development.</p>
-				<p>⚙️ Hands-on experience with automation test frameworks such as; Playwright, CypressIO, Protractor, Cucumber, WebdriverIO & Supertest.</p>
-				<p>🗣 JavaScript/Node (with a touch of Ruby & C#) </p>
-			</ul>
-			<h2>About me</h2>
-			<ul>
-				<p>📍 Based in Edinburgh.</p>
-				<p>🌭 Owner of two (naughty) sausage dogs.</p>
-				<p>🎮 I play video games.</p>
-				<p>🍰 Bit of a foodie.</p>
-			</ul>
-			<h2>Chat</h2>
-			<p>
-				Talk to me about work, or any of the above!
-			</p>
-			<Socials />
-		</main>
-		<Footer />
-	</body>
-</html>
+<MainLayout title={consts.title} />
