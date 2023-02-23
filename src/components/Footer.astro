@@ -7,11 +7,11 @@ const today = new Date();
   <div class="mx-auto max-w-7xl overflow-hidden py-5 px-6 sm:py-1 lg:px-1">
     <div class="mt-5 flex justify-center space-x-10">
       <a
-        href={consts.linkedInUrl}
+        href={consts.socials[1].linkedInUrl}
         class="text-pink-600 hover:text-gray-600"
         target="_blank"
       >
-        <span class="sr-only">LinkedIn</span>
+        <span class="sr-only">{consts.socials[1].linkedIn}</span>
         <svg
           class="h-6 w-6"
           fill="currentColor"
@@ -26,11 +26,11 @@ const today = new Date();
       </a>
 
       <a
-        href={consts.githubUrl}
+        href={consts.socials[0].githubUrl}
         class="text-pink-600 hover:text-gray-600"
         target="_blank"
       >
-        <span class="sr-only">GitHub</span>
+        <span class="sr-only">{consts.socials[0].github}</span>
         <svg
           class="h-6 w-6"
           fill="currentColor"
