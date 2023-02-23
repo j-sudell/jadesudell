@@ -11,5 +11,15 @@
       "linkedIn": "LinkedIn",
       "linkedInUrl": "https://www.linkedin.com/in/jadesudell/"
     }
+  ],
+  "tools": [
+    {
+      "name": "Astro",
+      "url": "https://astro.build/"
+    },
+    {
+      "name": "TailwindCSS",
+      "url": "https://tailwindcss.com/"
+    }
   ]
 }
