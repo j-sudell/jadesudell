@@ -1,8 +1,25 @@
 {
-    "title": "Hi | Jade Sudell",
-    "header": "Hi, I'm Jade.",
-    "name": "Jade Sudell",
-    "githubUrl": "https://github.com/j-sudell",
-    "linkedInUrl": "https://www.linkedin.com/in/jadesudell/"
+  "title": "Hi | Jade Sudell",
+  "header": "Hi, I'm Jade.",
+  "name": "Jade Sudell",
+  "socials": [
+    {
+      "github": "GitHub",
+      "githubUrl": "https://github.com/j-sudell"
+    },
+    {
+      "linkedIn": "LinkedIn",
+      "linkedInUrl": "https://www.linkedin.com/in/jadesudell/"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Astro",
+      "url": "https://astro.build/"
+    },
+    {
+      "name": "TailwindCSS",
+      "url": "https://tailwindcss.com/"
+    }
+  ]
 }
-
